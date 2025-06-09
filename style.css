@@ -1,29 +1,30 @@
-*{
- text-decoration: none;
- list-style: none;
+* {
+  text-decoration: none;
+  list-style: none;
 }
+
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'TT Lakes', sans-serif;
 }
-button{
-  width: 40px;
-  height: 40px;
+
+button {
+  width: 48px; 
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FF3E79;
   border-radius: 50px;
-  border:none;
-  
+  border: none;
+  cursor: pointer;
 }
-
 .mobile-menu {
   position: fixed;
-  top: 0;
+  top: 40px; 
   left: 0;
   width: 320px;
-  height: 100vh;
+  height: calc(100vh - 40px); 
   background-color: #fff;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -37,6 +38,7 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px; 
 }
 
 .mobile-menu__icon {
@@ -62,15 +64,23 @@ button{
 .mobile-menu__logo {
   width: 97px;
   height: 50px;
-  
 }
 
 .mobile-menu__nav {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin: 116px 0 0 0;
+  margin-top: 90px;
 }
+
+.mobile-menu__list {
+  padding: 0;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .mobile-menu__item {
   position: relative;
   display: flex;
@@ -78,11 +88,10 @@ button{
   padding-left: 16px;
 }
 
-
 .mobile-menu__item::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: -15px;
   top: 50%;
   transform: translateY(-50%);
   width: 4px;
@@ -97,33 +106,13 @@ button{
   opacity: 1;
 }
 
-.mobile-menu__list{
-    padding:0 ;
-    position: relative;
-    left:-15px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-.mobile-menu__item{
-    display: flex;
-    align-items: center;
-}
-
-.title__line{
-  width: 4px;
-  height: 40px;
-  border-radius: 0 25px 25px 0;
-  background-color: #41F6D7;
-  margin-right: -12px;
-  transform: rotate(-180deg);
-}
-
 .mobile-menu__link {
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 16px; 
+  line-height: 24px; 
   transition: opacity 0.3s ease;
+  font-weight: 500;
 }
 
 .mobile-menu__link:hover {
@@ -134,17 +123,25 @@ button{
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-bottom: 40px; 
 }
 
 .mobile-menu__icons {
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
-
 }
 
 .mobile-menu__circle-btn {
-    cursor: pointer;
+  width: 48px; 
+  height: 48px; 
+  cursor: pointer;
+  background-color: #FF3E79;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-menu__circle-btn:hover {
@@ -153,19 +150,23 @@ button{
 
 .mobile-menu__email,
 .mobile-menu__phone {
-  color: #000;
-  font-size: 14px;
+  font-size: 16px; 
   text-decoration: none;
   margin-bottom: 12px;
-  font-weight: bold;
+  font-weight: 400; 
+  font-size: 16px;
+  font-weight: 500;
+  color: #1B1C21;
+  line-height: 24px;
 }
+
 .mobile-menu__phone {
-  display: inline-block; 
+  display: inline-block;
   width: 196px;
   height: 32px;
-  font-weight: bold;
+  font-weight: 400;
   color: #000;
-  font-size: 14px;
+  font-size: 24px; 
   text-decoration: none;
   line-height: 32px; 
 }
@@ -178,16 +179,26 @@ button{
 .mobile-menu__lang {
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: #000;
   cursor: pointer;
   transition: opacity 0.3s ease;
-  gap: 7px;
 }
 
 .mobile-menu__lang:hover {
   opacity: 0.6;
 }
-
+.mobile-menu__bottom {
+  margin-top: auto;
+  padding-bottom: 16px;
+}
+.mobile-menu__circle-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+.bold-text {
+  font-weight: 700;
+}
 
