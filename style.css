@@ -1,16 +1,21 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-size: 16px;
 }
 
 body {
   margin: 0;
   font-family: 'TT Lakes', sans-serif;
+  background-color: #F8F8F8;
 }
 
 button {
-  width: 48px; 
-  height: 48px;
+  width: 40px; 
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,18 +24,21 @@ button {
   border: none;
   cursor: pointer;
 }
+
+
 .mobile-menu {
   position: fixed;
   top: 40px; 
   left: 0;
   width: 320px;
-  height: calc(100vh - 40px); 
+  height: 100vh; 
+  overflow-y: auto;
   background-color: #fff;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 16px;
+  padding: 20px 24px;
   z-index: 999;
 }
 
@@ -38,7 +46,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px; 
+  margin-bottom: 46px; 
+  margin-top: 19px;
 }
 
 .mobile-menu__icon {
@@ -64,17 +73,18 @@ button {
 .mobile-menu__logo {
   width: 97px;
   height: 50px;
+  margin-right:80px;
+  margin-left: 16px;
 }
 
 .mobile-menu__nav {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin-top: 90px;
+  margin:0 0 268px 0;
 }
 
 .mobile-menu__list {
-  padding: 0;
+  padding-right: 0;
   margin-left: 0;
   display: flex;
   flex-direction: column;
@@ -85,13 +95,15 @@ button {
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 16px;
+  padding:0;
+  font-weight:500;
+  line-height: 24px;
 }
 
 .mobile-menu__item::before {
   content: "";
   position: absolute;
-  left: -15px;
+  left: -23px;
   top: 50%;
   transform: translateY(-50%);
   width: 4px;
@@ -123,18 +135,18 @@ button {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-bottom: 40px; 
+  margin:0; 
 }
 
 .mobile-menu__icons {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 16px;
 }
 
 .mobile-menu__circle-btn {
-  width: 48px; 
-  height: 48px; 
+  width: 40px; 
+  height: 40px; 
   cursor: pointer;
   background-color: #FF3E79;
   border-radius: 50px;
@@ -152,9 +164,7 @@ button {
 .mobile-menu__phone {
   font-size: 16px; 
   text-decoration: none;
-  margin-bottom: 12px;
-  font-weight: 400; 
-  font-size: 16px;
+  margin-bottom: 12px; 
   font-weight: 500;
   color: #1B1C21;
   line-height: 24px;
@@ -164,7 +174,7 @@ button {
   display: inline-block;
   width: 196px;
   height: 32px;
-  font-weight: 400;
+  font-weight: 700;
   color: #000;
   font-size: 24px; 
   text-decoration: none;
